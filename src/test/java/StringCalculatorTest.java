@@ -40,4 +40,11 @@ public class StringCalculatorTest {
         expected = 6;
         assertEquals(expected,actual);
     }
+
+    @Test
+    void supportingDelimiters(){
+        actual = stringCalculator.Add("“//;\\n1;2");
+        expected = 3;
+        assertEquals(expected,actual);
+    }
 }
