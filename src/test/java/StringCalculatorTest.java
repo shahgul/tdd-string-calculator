@@ -10,13 +10,20 @@ public class StringCalculatorTest {
     void shouldReturnZeroWhenStringEmpty(){
         actual = stringCalculator.Add("");
         expected = 0;
-        assertEquals(actual,expected);
+        assertEquals(expected,actual);
     }
 
     @Test
     void shouldReturnSameWhenStringIsSingleLength(){
         actual = stringCalculator.Add("1");
         expected = 1;
-        assertEquals(actual,expected);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void shouldReturnSumOfBothNumbersWhenLengthIsTwo(){
+        actual = stringCalculator.Add("12");
+        expected = 3;
+        assertEquals(expected,actual);
     }
 }
