@@ -9,7 +9,8 @@ public class StringCalculator {
             int sum = 0;
             for (int i = 0; i< stringLength; i++){
                 char ch = numbers.charAt(i);
-                sum+=ch-48;
+                if ((ch>='0')&&(ch<='9'))
+                    sum+=ch-48;
             }
             return sum;
         }

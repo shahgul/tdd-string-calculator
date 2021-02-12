@@ -33,4 +33,11 @@ public class StringCalculatorTest {
         expected = 8;
         assertEquals(expected,actual);
     }
+
+    @Test
+    void allowingNewLinesBetweenNumbersButNotComma(){
+        actual = stringCalculator.Add("1\\n,2,3");
+        expected = 6;
+        assertEquals(expected,actual);
+    }
 }
