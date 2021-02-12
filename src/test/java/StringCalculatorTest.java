@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class StringCalculatorTest {
     StringCalculator stringCalculator = new StringCalculator();
     int actual;
-    int expected;
+    int expected = 6+2;
 
     @Test
     void shouldReturnZeroWhenStringEmpty(){
@@ -24,6 +24,13 @@ public class StringCalculatorTest {
     void shouldReturnSumOfBothNumbersWhenLengthIsTwo(){
         actual = stringCalculator.Add("12");
         expected = 3;
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void shouldReturnSumOfAllNumbersWhenLengthIsGreaterThantwo(){
+        actual = stringCalculator.Add("1232");
+        expected = 8;
         assertEquals(expected,actual);
     }
 }

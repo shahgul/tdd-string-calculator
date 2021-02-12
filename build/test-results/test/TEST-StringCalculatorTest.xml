@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-12T12:23:01" hostname="LAPTOP-0IPVLJS7" time="0.017">
+<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-12T12:34:03" hostname="LAPTOP-0IPVLJS7" time="0.016">
   <properties/>
-  <testcase name="shouldReturnSumOfBothNumbersWhenLengthIsTwo()" classname="StringCalculatorTest" time="0.017"/>
+  <testcase name="shouldReturnSumOfAllNumbersWhenLengthIsGreaterThantwo()" classname="StringCalculatorTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
