@@ -1,5 +1,5 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringCalculatorTest {
 
@@ -8,7 +8,6 @@ public class StringCalculatorTest {
         StringCalculator stringCalculator = new StringCalculator();
         int actual = stringCalculator.Add("");
         int expected = 0;
-        Assertions.assertEquals(expected, actual);
-        
+        assertEquals(actual,expected);
     }
 }
