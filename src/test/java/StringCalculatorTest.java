@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StringCalculatorTest {
     StringCalculator stringCalculator = new StringCalculator();
@@ -43,8 +44,13 @@ public class StringCalculatorTest {
 
     @Test
     void supportingDelimiters(){
-        actual = stringCalculator.Add("“//;\\n1;2");
-        expected = 3;
+        actual = stringCalculator.Add("“//;\\n1;2,5,6");
+        expected = 14;
         assertEquals(expected,actual);
+    }
+
+    @Test
+    void throwingExceptionOnOneNegativeNumber(){
+        assertThrows(NumberFormatException.class, ()->stringCalculator.Add("-9"),"Negatives are not allowed");
     }
 }
