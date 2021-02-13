@@ -4,28 +4,23 @@ import java.util.regex.*;
 public class StringCalculator {
     public int Add(String numbers){
         int stringLength = numbers.length();
-        if (stringLength == 1)
+        if (stringLength==0)
+            return 0;
+        else if (stringLength == 1)
             return Integer.parseInt(numbers);
-        else if (stringLength == 2){
-            if (Integer.parseInt(numbers)<0)
+        else{
+            if ((numbers.length()==2)&&(Integer.parseInt(numbers)<0))
                 throw new NumberFormatException("Negatives are not allowed " + numbers);
-            else
-                return Integer.parseInt(String.valueOf(numbers.charAt(0))) + Integer.parseInt(String.valueOf(numbers.charAt(1)));
-        }
-        else if (stringLength > 2){
-            if (checkAndReturnNegatives(numbers).size()==0){
+            else if (checkAndReturnNegatives(numbers).size()==0){
+                String[] nums = numbers.split("[,\n]");
                 int sum = 0;
-                for (int i = 0; i< stringLength; i++){
-                    char ch = numbers.charAt(i);
-                    if ((ch>='0')&&(ch<='9'))
-                        sum+=ch-48;
-                }
+                for(String temp:nums)
+                    sum+=Integer.parseInt(temp);
                 return sum;
             }
             else
                 throw new NumberFormatException("Negatives are not allowed " + checkAndReturnNegatives(numbers));
         }
-        return 0;
     }
 
     List<String> checkAndReturnNegatives(String s) {

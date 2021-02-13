@@ -36,15 +36,15 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void allowingNewLinesBetweenNumbersButNotComma(){
-        actual = stringCalculator.Add("1\\n,2,3");
+    void allowingNewLinesBetweenNumbers(){
+        actual = stringCalculator.Add("1\n2,3");
         expected = 6;
         assertEquals(expected,actual);
     }
 
     @Test
     void supportingDelimiters(){
-        actual = stringCalculator.Add("“//;\\n1;2,5,6");
+        actual = stringCalculator.Add("//;\n1;2,5,6");
         expected = 14;
         assertEquals(expected,actual);
     }
@@ -57,5 +57,10 @@ public class StringCalculatorTest {
     @Test
     void throwingExceptionOnMultipleNegativeNumber(){
         assertThrows(NumberFormatException.class, ()->stringCalculator.Add("-9-2-5-8"),"Negatives are not allowed, there are multiple");
+    }
+
+    @Test
+    void numberOfTimeAddWasInvoked(){
+
     }
 }
