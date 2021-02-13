@@ -60,7 +60,9 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void numberOfTimeAddWasInvoked(){
-
+    void numberBiggerThan1000ShouldNotBeAdded(){
+        actual = stringCalculator.Add("2,1001");
+        expected = 2;
+        assertEquals(expected,actual);
     }
 }

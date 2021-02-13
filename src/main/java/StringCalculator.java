@@ -21,7 +21,8 @@ public class StringCalculator {
                 }
                 else {
                     for(String temp:nums)
-                        sum+=Integer.parseInt(temp);
+                        if (Integer.parseInt(temp)<=1000)
+                            sum+=Integer.parseInt(temp);
                 }
                 return sum;
 

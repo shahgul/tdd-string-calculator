@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringCalculatorTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-02-13T19:18:12" hostname="LAPTOP-0IPVLJS7" time="0.02">
+<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-13T19:25:56" hostname="LAPTOP-0IPVLJS7" time="0.012">
   <properties/>
-  <testcase name="shouldReturnSameWhenStringIsSingleLength()" classname="StringCalculatorTest" time="0.011"/>
-  <testcase name="numberOfTimeAddWasInvoked()" classname="StringCalculatorTest" time="0.0"/>
-  <testcase name="shouldReturnZeroWhenStringEmpty()" classname="StringCalculatorTest" time="0.0"/>
-  <testcase name="allowingNewLinesBetweenNumbers()" classname="StringCalculatorTest" time="0.0"/>
-  <testcase name="throwingExceptionOnOneNegativeNumber()" classname="StringCalculatorTest" time="0.001"/>
-  <testcase name="shouldReturnSumOfAllNumbersWhenLengthIsGreaterThantwo()" classname="StringCalculatorTest" time="0.0"/>
-  <testcase name="shouldReturnSumOfBothNumbersWhenLengthIsTwo()" classname="StringCalculatorTest" time="0.0"/>
-  <testcase name="supportingDelimiters()" classname="StringCalculatorTest" time="0.001"/>
-  <testcase name="throwingExceptionOnMultipleNegativeNumber()" classname="StringCalculatorTest" time="0.001"/>
+  <testcase name="numberBiggeraThan1000ShouldNotBeAdded()" classname="StringCalculatorTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
