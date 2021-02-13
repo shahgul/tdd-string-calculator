@@ -53,4 +53,9 @@ public class StringCalculatorTest {
     void throwingExceptionOnOneNegativeNumber(){
         assertThrows(NumberFormatException.class, ()->stringCalculator.Add("-9"),"Negatives are not allowed");
     }
+
+    @Test
+    void throwingExceptionOnMultipleNegativeNumber(){
+        assertThrows(NumberFormatException.class, ()->stringCalculator.Add("-9-2-5-8"),"Negatives are not allowed, there are multiple");
+    }
 }

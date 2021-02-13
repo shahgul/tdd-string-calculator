@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-13T12:03:47" hostname="LAPTOP-0IPVLJS7" time="0.017">
+<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-13T13:10:18" hostname="LAPTOP-0IPVLJS7" time="0.017">
   <properties/>
-  <testcase name="supportingDelimiters()" classname="StringCalculatorTest" time="0.017"/>
+  <testcase name="throwingExceptionOnMultipleNegativeNumber()" classname="StringCalculatorTest" time="0.017"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
