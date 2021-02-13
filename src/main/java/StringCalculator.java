@@ -14,9 +14,17 @@ public class StringCalculator {
             else if (checkAndReturnNegatives(numbers).size()==0){
                 String[] nums = numbers.split("[,\n]");
                 int sum = 0;
-                for(String temp:nums)
-                    sum+=Integer.parseInt(temp);
+                if (nums[0].contains("//")){
+                    String[] delimiters = nums[1].split(nums[0].substring(2,3));
+                    for (String temp:delimiters)
+                        sum+=Integer.parseInt(temp);
+                }
+                else {
+                    for(String temp:nums)
+                        sum+=Integer.parseInt(temp);
+                }
                 return sum;
+
             }
             else
                 throw new NumberFormatException("Negatives are not allowed " + checkAndReturnNegatives(numbers));

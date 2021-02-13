@@ -23,14 +23,14 @@ public class StringCalculatorTest {
 
     @Test
     void shouldReturnSumOfBothNumbersWhenLengthIsTwo(){
-        actual = stringCalculator.Add("12");
+        actual = stringCalculator.Add("1,2");
         expected = 3;
         assertEquals(expected,actual);
     }
 
     @Test
     void shouldReturnSumOfAllNumbersWhenLengthIsGreaterThantwo(){
-        actual = stringCalculator.Add("1232");
+        actual = stringCalculator.Add("1,2,3,2");
         expected = 8;
         assertEquals(expected,actual);
     }
@@ -44,7 +44,7 @@ public class StringCalculatorTest {
 
     @Test
     void supportingDelimiters(){
-        actual = stringCalculator.Add("//;\n1;2,5,6");
+        actual = stringCalculator.Add("//;\n1;2;5;6");
         expected = 14;
         assertEquals(expected,actual);
     }
