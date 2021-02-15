@@ -72,4 +72,11 @@ public class StringCalculatorTest {
         expected = 6;
         assertEquals(expected,actual);
     }
+
+    @Test
+    void supportMultipleDelimiters(){
+        actual = stringCalculator.Add("//[*][%]\n1*2%3");
+        expected = 6;
+        assertEquals(expected,actual);
+    }
 }
