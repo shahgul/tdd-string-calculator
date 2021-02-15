@@ -15,7 +15,9 @@ public class StringCalculator {
                 String[] nums = numbers.split("[,\n]");
                 int sum = 0;
                 if (nums[0].startsWith("//[")){
-                    String[] delimiters = nums[1].split(nums[0].substring(3,4));
+                    String escapedMetacharacter = escapeDanglingMetacharacter(nums[0]);
+                    int lastIndex = escapedMetacharacter.lastIndexOf("]");
+                    String[] delimiters = nums[1].split(escapedMetacharacter.substring(3,lastIndex));
                     for (String temp:delimiters)
                         sum+=Integer.parseInt(temp);
                 }
@@ -39,5 +41,16 @@ public class StringCalculator {
         List<String> ls = new ArrayList<>();
         while(m.find()) ls.add(m.group());
         return ls;
+    }
+
+    String escapeDanglingMetacharacter(String s){
+        StringBuilder toReturn = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if ((ch == '*')||(ch == '+')||(ch == '$')|| (ch == '^'))
+                toReturn.append("\\");
+            toReturn.append(ch);
+        }
+        return toReturn.toString();
     }
 }

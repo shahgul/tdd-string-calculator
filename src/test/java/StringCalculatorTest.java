@@ -65,4 +65,11 @@ public class StringCalculatorTest {
         expected = 2;
         assertEquals(expected,actual);
     }
+
+    @Test
+    void supportingDelimitersOfAnyLength(){
+        actual = stringCalculator.Add("//[***]\n1***2***3");
+        expected = 6;
+        assertEquals(expected,actual);
+    }
 }

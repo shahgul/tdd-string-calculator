@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-13T19:25:56" hostname="LAPTOP-0IPVLJS7" time="0.012">
+<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-15T19:05:05" hostname="LAPTOP-0IPVLJS7" time="0.019">
   <properties/>
-  <testcase name="numberBiggeraThan1000ShouldNotBeAdded()" classname="StringCalculatorTest" time="0.012"/>
+  <testcase name="supportingDelimitersOfAnyLength()" classname="StringCalculatorTest" time="0.019"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
