@@ -44,7 +44,7 @@ public class StringCalculatorTest {
 
     @Test
     void supportingDelimiters(){
-        actual = stringCalculator.Add("//;\n1;2;5;6");
+        actual = stringCalculator.Add("//[;]\n1;2;5;6");
         expected = 14;
         assertEquals(expected,actual);
     }

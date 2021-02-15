@@ -14,8 +14,8 @@ public class StringCalculator {
             else if (checkAndReturnNegatives(numbers).size()==0){
                 String[] nums = numbers.split("[,\n]");
                 int sum = 0;
-                if (nums[0].contains("//")){
-                    String[] delimiters = nums[1].split(nums[0].substring(2,3));
+                if (nums[0].startsWith("//[")){
+                    String[] delimiters = nums[1].split(nums[0].substring(3,4));
                     for (String temp:delimiters)
                         sum+=Integer.parseInt(temp);
                 }
