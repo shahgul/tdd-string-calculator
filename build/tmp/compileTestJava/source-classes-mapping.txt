@@ -1,2 +1,0 @@
-StringCalculatorTest.java
- StringCalculatorTest
