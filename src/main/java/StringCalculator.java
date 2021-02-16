@@ -14,11 +14,11 @@ public class StringCalculator {
             else { // When string has Positive Integers
                 String[] numbs = numbers.split("[,\n]");
                 int sum = 0;
-                if (numbs[0].startsWith("//[")) {
+                if (numbs[0].startsWith("//")) {
                     String extractDelimiter = extractRegex(numbs[0]);
                     String regex = escapeDanglingMetacharacter(extractDelimiter);
-                    String[] delimiters = numbs[1].split(regex);
-                    for (String temp : delimiters)
+                    String[] numbersForSum = numbs[1].split(regex);
+                    for (String temp : numbersForSum)
                         sum += Integer.parseInt(temp);
                 } else {
                     for (String temp : numbs)
