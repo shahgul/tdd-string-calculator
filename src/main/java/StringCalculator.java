@@ -51,7 +51,7 @@ public class StringCalculator {
     }
 
     String extractRegex(String ss) {
-        String s = ss.replace("][","");
+        String s = ss.replace("][","|");
         StringBuilder toReturn = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);

@@ -75,8 +75,8 @@ public class StringCalculatorTest {
 
     @Test
     void supportMultipleDelimiters(){
-        actual = stringCalculator.Add("//[*][%]\n1*2%3");
-        expected = 6;
+        actual = stringCalculator.Add("//[**][^][%][+]\n6**2^7%3+9");
+        expected = 27;
         assertEquals(expected,actual);
     }
 }
