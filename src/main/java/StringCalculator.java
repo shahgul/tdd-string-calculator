@@ -12,7 +12,7 @@ public class StringCalculator {
             if (checkAndReturnNegatives(numbers).size() > 0)// When string has more than 1 negative numbers
                 throw new NumberFormatException("Negatives are not allowed " + checkAndReturnNegatives(numbers));
             else { // When string has Positive Integers
-                String[] numbs = numbers.split("[,\n]");
+                String[] numbs = numbers.split("(,|\\\\n|\n)");
                 int sum = 0;
                 if (numbs[0].startsWith("//")) {
                     String extractDelimiter = extractRegex(numbs[0]);
@@ -31,7 +31,7 @@ public class StringCalculator {
     }
 
     List<String> checkAndReturnNegatives(String s) {
-        String regex = "(-\\d)";
+        String regex = "(-\\d*)";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(s);
         List<String> ls = new ArrayList<>();
